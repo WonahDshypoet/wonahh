@@ -1,0 +1,299 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+body{
+    width: 100%;
+}
+section{
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+
+}
+        /*HEADER*/
+header{
+    background-color:deepskyblue;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+}
+.header-brand{
+    font-family: sans-serif;
+    font-weight: 800;
+    font: size 24px;
+    color: #111111;
+    font-style: italic;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+header nav ul{
+    float: right;
+    padding: 10px;
+    text-align: center;
+}
+li{
+    display: inline-block;
+    padding: 10px;
+    font-style: bold;
+    font-weight: 200px;
+    margin:auto 0px;
+    
+}
+header a{
+    color:wheat;
+    transition: ease-in-out 0.5s;
+}
+header a:hover{
+    color:#ccc000;
+}
+header a:active{
+    color: rgb(197, 119, 74);
+}
+      /*INDEX*/
+.index{
+    width: 100%;
+    height:100vh;
+    background-image: url(download.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+    background-position:center ;
+    color: white;
+    display: table;
+}
+.index-brand{
+    display: table-cell;
+    vertical-align: middle;
+}
+.index h1{
+    font-family: Cormorant garamond;
+    font-size: 65px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 70px;
+    color:rgb(105, 226, 216);
+    text-shadow: 2px 2px 5px #111;
+}
+#paragraph{
+    font-family: Cormorant garamond;
+    font-style: italic;
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #111;
+}
+            /*ABOUT-SECTION*/
+.index-about{
+    background-color: rgb(74, 153, 153);
+    height: fit-content;
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    background-position: center;
+    padding-top: 70px;
+}
+.about{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+#about-h1{
+    font-family: Cormorant garamond;
+    margin-top: 10px;
+    color: #464538;
+    font-weight: normal;
+    text-align: center; 
+    padding: 10px;
+    margin: 10px; 
+}
+.about-p{
+    font-family: cormorant garamond;
+    display: block;
+    padding-top: 60px;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 28px;
+    font-weight:lighter;
+    font-size: 16px;
+    color: #111111;
+}
+#image{
+    padding-top: 15px;
+    border-radius: 50%;
+}
+#message{
+    font-family: Cormorant Garamond;
+    color: #ccc;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;   
+}
+            /*HIRE - ME*/
+#hire-me{
+    background-image: url(download.jpg);
+    width: 100%;
+    height: fit-content;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode:lighten;
+    background-position: center;
+    overflow: auto;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+#about-h2{
+    color: #464538;
+    padding: 10px;
+    margin: 10px;
+}
+.box{
+    font-family: Cormorant garamond;
+    /*border: 1px solid #ccc;*/
+    padding: 10px;
+    text-align: center;
+    flex-basis: 27%;
+} 
+.box h2{
+    color:rgb(105, 226, 216);
+    text-shadow: 2px 2px 5px #111;
+    font-style: oblique;
+    font-size: 20px;
+}
+.box p{
+    color: white;
+    text-shadow: 2px 2px 5px #111;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 7px;
+}
+#contactme{
+    font-family: Cormorant Garamond;
+    color: #ccc;
+    font-size: 18px;
+    font-style: inherit;
+    font-weight: normal;
+    display: block;
+    padding: 20px;
+    text-align: center;   
+}
+         /*FOOTER*/
+.copy-footer{
+    background-color: rgb(13, 121, 40);
+    width: 100%;
+    height: 120px;
+    text-align: center;
+}
+footer article{
+    color: rgb(25, 26, 92);
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+}
+#socials img{
+    width: 5%;
+    height: 25px;
+    border-radius: 50%;
+    padding: auto;
+}
+
+            /*CONTACT PAGE*/
+.contact-me{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    height: 100vh;
+    width:100%;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 120px;
+    margin: 0 auto;
+    background-color: rgb(4, 4, 49);
+    background-size: cover;
+    border: 1px thin;
+
+}
+#contact-form{
+    display: block;
+    text-align: center;
+    height:300px;
+}
+#contact-form p{
+    padding: 7px;
+}
+textarea{
+    height:250px;
+    width: 70%;
+    border-radius: 0px;
+    background-color:white;
+    border: thin;
+}
+#input{
+    width: 70%;
+    height: 20px;
+    background-color:white;
+    border: thin;
+    text-align: center;
+}
+#button{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: bold;
+    font-style:italic;
+    font-size: medium;
+    color:white;
+    height: 30px;
+    width:10%;
+    background-color: rgb(248, 89, 16);
+    border-radius: 10px;
+    border:1px ;
+    text-align: center;
+}
+legend{
+    font-family:Cormorant garamond;
+    font-size: 20px;
+    color:rgb(105, 226, 216);
+    text-transform: uppercase;
+}
+fieldset{
+    border-radius: 10px;
+    border: 1px rgb(82, 82, 95);
+}
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+        /*MEDIA QUERY*/
+@media (max-width: 760px){
+    .container{
+        flex-direction: column;
+    }
+    .container1{
+        display: flex;
+        justify-content: space-around;
+    }
+    .container-me1, .container-me4{
+        font-family: Cormorant garamond;
+        /*border: 1px solid #ccc;*/
+        padding: 10px;
+        text-align: center;
+        flex-basis: 27%;
+        flex-direction: column;
+    } 
+    
+}

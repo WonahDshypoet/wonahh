@@ -1,0 +1,64 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+           Contact me
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="wonah Godwin"/>
+        <meta name="Copyright" content="Copyright Wonah Godwin, All Rights reserved"/>
+        <meta name="description" content="I'm Wonah a freelance Web developer &amp; designer"/>
+        {% load static %}
+        <link href="{% static 'home\style.css' %}" type="text/css" rel="stylesheet"/>
+    </head>
+<body>
+    <header class="container">
+        <a href="{% url 'homepage' %}" class="header-brand" color="white"> ....Wonah<br> Web developer</a>
+        <nav>
+            <ul>
+                <li><a href="contact.html" target="_blank">Contact</a> </li>
+                <li><a href="services.html" target="=_blank">Services</a></li>
+                <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-me">
+        <div id="contact-form">
+            <form method="POST" action="#">
+                <fieldset>
+                    <legend></legend>
+                    <p>
+                        <label>Name: </br>
+                            <input type="text" id="input" name="Name" data-help="Your Name" placeholder="Your Name"/>
+                        </label></br>
+                    </p>
+                    <p>
+                        <label>Email: </br>
+                            <input type="text" id="input" name="Email" data-help="Your Email" placeholder="Your Email"/>
+                        </label></br>        
+                    </p>
+                    <p>
+                        <label>Subject: </br>
+                            <input type="text" id="input" name="Subject" data-help="what do you need?" placeholder="What do You wanna Talk about?"/>
+                        </label>        
+                    </p>
+                    <p> 
+                        <label>Message: </br>
+                        <textarea id="textarea"></textarea>
+                        </label>
+                    </p>
+                </fieldset><br>
+                    <input type="submit" value="Send" id="button"/>
+            </form>    
+        </div>            
+    </section>
+    <footer align="center" class="copy-footer">
+        <article>
+            &copy; Copyright Wonah Godwin, All rights reserved.<br>
+            Connect with me.
+        </article>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
