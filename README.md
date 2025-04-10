@@ -9,4 +9,4 @@ It features:
 - A snake game
 - External links to my socials
 
-🎯 More features coming soon.
+More features coming soon.
