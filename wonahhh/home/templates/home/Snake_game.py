@@ -44,8 +44,8 @@ score_font = pygame.font.SysFont("comicsansms", 35)
  - Gameloop func.: used for the game logic. follow code to understand in depth.
 '''
     
-def score(score):
-    value = score_font.render("Score: " + str(score), True, yellow)
+def score(value):
+    value = score_font.render("Score: " + str(value), True, yellow)
     screen.blit(value, [0, 0])
     
 def snake(snake_block, snake_list):
@@ -74,6 +74,7 @@ def gameLoop():
     
     snake_list = []
     length = 1
+    score_value = 0
 
     # The random grid aligned location for the food
     
@@ -137,13 +138,14 @@ def gameLoop():
             if block == snake_head:
                 game_close = True
         snake(snake_block, snake_list)
-        score(length - 1)
+        score(score_value)
         pygame.display.update()
         
         if x == foodx and y == foody:
             foodx = round(random.randrange(0, width - snake_block) / 10.0) * 10.0
             foody = round(random.randrange(0, height - snake_block) / 10.0) * 10.0
             length += 1
+            score_value += 5
 
         clock.tick(snake_speed)
 

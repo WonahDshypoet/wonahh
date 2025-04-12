@@ -3,23 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <title>
-           Contact me
+            Contact Me 
         </title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="wonah Godwin"/>
+        <meta name="author" content="Wonah Godwin"/>
         <meta name="Copyright" content="Copyright Wonah Godwin, All Rights reserved"/>
-        <meta name="description" content="I'm Wonah a freelance Web developer &amp; designer"/>
+        <meta name="description" content="I'm Godwin a freelance Web developer &amp; designer"/>
         {% load static %}
         <link href="{% static 'home\style.css' %}" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
     </head>
 <body>
-    <header class="container">
-        <a href="{% url 'homepage' %}" class="header-brand" color="white"> ....Wonah<br> Web developer</a>
+    <header class="header">
+        <a href="{% url 'homepage' %}" class="header-brand" color="white"> ....Wonah<br> Developer</a>
         <nav>
-            <ul>
-                <li><a href="contact.html" target="_blank">Contact</a> </li>
-                <li><a href="services.html" target="=_blank">Services</a></li>
-                <li><a href="portfolio.html" target="_blank">Portfolio</a></li>
+             <ul>
+                <li><a href="contact" target="_blank">Contact</a> </li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="Profile.pdf" target="_blank">Resume</a></li>
+                <li><a href="#About">About</a></li>
             </ul>
         </nav>
     </header>
@@ -58,6 +60,9 @@
             &copy; Copyright Wonah Godwin, All rights reserved.<br>
             Connect with me.
         </article>
+        <div id="socials"><a href="https://x.com/shypoet__"><img src="{% static 'home/xlogo.jpg' %}" alt="twitter"></a>
+            <a href="https://www.quora.com/profile/Wonah-Godwin"><img src="{% static 'home/quoralogo.png' %}" alt="quora"></a>
+            <a href="https://www.jobberman.com/account/customer/job-seeker"><img src="{% static 'home/Jobbermanlogo.png' %}" alt="Jobberman"></a></div>
     </footer>
     <script src="main.js"></script>
 </body>
