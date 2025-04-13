@@ -17,7 +17,7 @@ section{
 }
         /*HEADER*/
 header{
-    background-color:deepskyblue;
+    background-color: white;
     height: 80px;
     position: fixed;
     width: 100%;
@@ -26,7 +26,7 @@ header{
     font-family: sans-serif;
     font-weight: 800;
     font: size 24px;
-    color: #111111;
+    color: #e41b1b;
     font-style: italic;
 }
 nav{
@@ -51,10 +51,10 @@ header a{
     transition: ease-in-out 0.5s;
 }
 header a:hover{
-    color:#ccc000;
+    color:#420202;
 }
 header a:active{
-    color: rgb(197, 119, 74);
+    color: rgb(35, 238, 28);
 }
       /*INDEX*/
 .index{
@@ -194,9 +194,9 @@ header a:active{
 }
          /*FOOTER*/
 .copy-footer{
-    background-color: rgb(13, 121, 40);
+    background-color: #2c3e50;
     width: 100%;
-    height: 120px;
+    height: 100px;
     text-align: center;
 }
 footer article{
@@ -205,12 +205,31 @@ footer article{
     padding: 15px;
     margin: 0 auto;
 }
-#socials img{
-    width: 5%;
-    height: 25px;
-    border-radius: 50%;
-    padding: auto;
+#socials{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
+#socials a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-size: 20px;  
+}
+#socials a:hover{
+    background-color: #1da1f2; 
+    color: white;
+}
+
 
             /*CONTACT PAGE*/
 .contact-me{
