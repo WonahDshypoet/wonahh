@@ -110,7 +110,7 @@ header a:active{
 #about-h1{
     font-family: Cormorant garamond;
     margin-top: 10px;
-    color: #464538;
+    color: wheat;
     font-weight: normal;
     text-align: center; 
     padding: 10px;
@@ -157,7 +157,7 @@ header a:active{
     justify-content: space-between;
 }
 #about-h2{
-    color: #111000;
+    color: wheat;
     padding: 10px;
     margin: 10px;
 }

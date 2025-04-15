@@ -7,6 +7,21 @@ def homepage(request):
     return render(request, 'home/index.html')
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        message = request.POST['message']
+
+        full_message = f"From: {name} <{email}>\n\n{message}"
+
+        send_mail(
+            subject="New Contact Form Submission",
+            message=full_message,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.CONTACT_EMAIL],
+        )
+        return redirect('Thank you for contacting me.2')
+    
     return render(request, 'home/contact.html')
 
 def services(request):
