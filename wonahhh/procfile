@@ -1,1 +1,1 @@
-web: gunicorn wonahhh/wonahhh.wsgi:application
+web: gunicorn .wonahhh.wsgi:application
