@@ -1,11 +1,14 @@
 *{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif, 'Poppins', sans-serif;
     text-decoration: none;
     margin: 0;
     padding: 0;
     background-color: transparent;
 }
 body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #222;  
     width: 100%;
 }
 section{
@@ -23,7 +26,7 @@ header{
     width: 100%;
 }
 .header-brand{
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 800;
     font: size 24px;
     color: white;
@@ -73,18 +76,18 @@ header a:active{
     vertical-align: middle;
 }
 .index h1{
-    font-family: Cormorant garamond;
     font-size: 65px;
     font-weight: 100;
     text-align: center;
     line-height: 70px;
     color:rgb(105, 226, 216);
     text-shadow: 2px 2px 5px #111;
+    font-family: 'Space Grotesk', sans-serif;
 }
 #paragraph{
-    font-family: Cormorant garamond;
+    font-family: 'Poppins', sans-serif;
     font-style: italic;
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #fff;
     line-height: 30px;
     text-align: center;
@@ -108,7 +111,7 @@ header a:active{
     display: block;
 }
 #about-h1{
-    font-family: Cormorant garamond;
+    font-family: 'Space Grotesk', sans-serif;
     margin-top: 10px;
     color: wheat;
     font-weight: normal;
@@ -117,7 +120,7 @@ header a:active{
     margin: 10px; 
 }
 .about-p{
-    font-family: cormorant garamond;
+    font-family: 'Poppins', sans-serif;
     display: block;
     padding-top: 60px;
     margin: 0 auto;
@@ -132,7 +135,7 @@ header a:active{
     border-radius: 50%;
 }
 #message{
-    font-family: Cormorant Garamond;
+    font-family: 'Space Grotesk', sans-serif;
     color: #ccc;
     font-size: 18px;
     padding: 10px;
@@ -162,8 +165,7 @@ header a:active{
     margin: 10px;
 }
 .box{
-    font-family: Cormorant garamond;
-    /*border: 1px solid #ccc;*/
+    font-family: 'Space Grotesk', sans-serif;
     padding: 10px;
     text-align: center;
     flex-basis: 27%;
@@ -183,7 +185,7 @@ header a:active{
     padding: 7px;
 }
 #contactme{
-    font-family: Cormorant Garamond;
+    font-family: 'Space Grotesk', sans-serif;  
     color: #ccc;
     font-size: 18px;
     font-style: inherit;
@@ -237,8 +239,7 @@ footer article {
 
             /*CONTACT PAGE*/
 .contact-me{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;
     width:100%;
     color: white;
@@ -274,7 +275,7 @@ textarea{
     text-align: center;
 }
 #button{
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: bold;
     font-style:italic;
     font-size: medium;
@@ -287,7 +288,7 @@ textarea{
     text-align: center;
 }
 legend{
-    font-family:Cormorant garamond;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color:rgb(105, 226, 216);
     text-transform: uppercase;
@@ -297,7 +298,7 @@ fieldset{
     border: 1px rgb(82, 82, 95);
 }
 label{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Poppins', sans-serif;
     font-style: italic;
     font-size: 20px;
 }
@@ -311,7 +312,7 @@ label{
         justify-content: space-around;
     }
     .container-me1, .container-me4{
-        font-family: Cormorant garamond;
+        font-family: 'Poppins', sans-serif;
         /*border: 1px solid #ccc;*/
         padding: 10px;
         text-align: center;

@@ -13,6 +13,7 @@
         <meta name="description" content="I'm Godwin a Django Web developer &amp; Python programmer"/>
         {% load static %}
         <link href="{% static 'home\style.css' %}" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <header class="header">
@@ -30,8 +31,9 @@
         <div class="index-brand">
             <h1>HEY, I AM WONAH</h1>
             <p id="paragraph">
-                I'm a Django Developer passionate about building secure, scalable web applications.<br>
-      I specialize in turning complex ideas into efficient back-end solutions that enhance performance, drive growth, and ensure reliability.            </p>
+                                I'm a Django Developer passionate about building secure, scalable web applications.<br>
+                I specialize in turning complex ideas into efficient back-end solutions that enhance performance, drive growth, and ensure reliability.            
+            </p>
         </div>
         </section>
         <section class="index-about"><a name="About">
@@ -39,16 +41,17 @@
                 About Me 
             </h2>
             <div class="about" align="center">
-                <img src="{% static 'home\meeeeee.jpg' %}" width="120" height="120" alt="image of Wonah" id="image"/>
+            <img src="{% static 'home\meeeeee.jpg' %}" width="120" height="120" alt="image of Wonah" id="image"/>
+            <span class="about-p">
                 Hello, my name is Godwin Wonah. I'm a software developer specializing in Django-based web applications, Python programming, and web scraping. I’m passionate about building clean, scalable, and secure software that solves real-world problems and improves lives.
 
-  With years of hands-on experience and a deep curiosity for how systems work, I’ve developed a variety of projects from responsive websites to complex backend systems. I’m confident working across both front-end and back-end stacks and have a solid grasp of databases, RESTful APIs, and modern web protocols.
+                With years of hands-on experience and a deep curiosity for how systems work, I’ve developed a variety of projects from responsive websites to complex backend systems. I’m confident working across both front-end and back-end stacks and have a solid grasp of databases, RESTful APIs, and modern web protocols.
 
-  Beyond technical skills, I’m a strong communicator and a collaborative team player who values diversity and continuous learning. I enjoy sharing ideas, improving workflows, and constantly seeking ways to deliver better solutions.
+                Beyond technical skills, I’m a strong communicator and a collaborative team player who values diversity and continuous learning. I enjoy sharing ideas, improving workflows, and constantly seeking ways to deliver better solutions.
 
-  If you're looking for a Django developer who brings both technical expertise and a creative approach to solving problems, feel free to reach out. I’d love to learn more about your project and how I can contribute.
+                If you're looking for a Django developer who brings both technical expertise and a creative approach to solving problems, feel free to reach out. I’d love to learn more about your project and how I can contribute.
 
-                </span>
+            </span>
                     <button id="message">
                         <a href="snake_game" target="_blank"> Projects </a>
                     </button>
@@ -107,7 +110,7 @@
             </article>
             <div id="socials"><a href="https://x.com/shypoet__"><img src="{% static 'home/xlogo.jpg' %}" alt="twitter"></a>
                 <a href="https://www.quora.com/profile/Wonah-Godwin"><img src="{% static 'home/quoralogo.png' %}" alt="quora"></a>
-                <a href="https://www.jobberman.com/account/customer/job-seeker"><img src="{% static 'home/Jobbermanlogo.png' %}" alt="Jobberman"></a>
+                <a href="https://www.jobberman.com/account/customer/job-seeker"><img src="{% static 'home/jobbermanlogo.png' %}" alt="Jobberman"></a>
             </div>
         </footer>
         
