@@ -22,7 +22,7 @@ def contact(request):
             from_email=settings.DEFAULT_FROM_EMAIL,
             recipient_list=[settings.CONTACT_EMAIL],
         )
-        return redirect('Thank you for contacting me. I would reply you very shortly.')
+        return redirect('/')
  
     return render(request, 'home/contact.html')
 
