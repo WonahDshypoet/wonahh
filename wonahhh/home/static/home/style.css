@@ -1,5 +1,5 @@
 *{
-    font-family:Georgia, 'Times New Roman', Times, serif, 'Poppins', sans-serif;
+    font-family:'Poppins', 'Times New Roman', Times, serif, sans-serif;
     text-decoration: none;
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ section{
         /*HEADER*/
 header{
     background-color: deepskyblue;
-    height: 80px;
+    height: 100px;
     position: fixed;
     width: 100%;
 }
@@ -76,13 +76,14 @@ header a:active{
     vertical-align: middle;
 }
 .index h1{
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 65px;
     font-weight: 100;
     text-align: center;
     line-height: 70px;
     color:rgb(105, 226, 216);
     text-shadow: 2px 2px 5px #111;
-    font-family: 'Space Grotesk', sans-serif;
+    
 }
 #paragraph{
     font-family: 'Poppins', sans-serif;
@@ -177,6 +178,7 @@ header a:active{
     font-size: 20px;
 }
 .box p{
+    font-family: 'Poppins', sans-serif;
     color: white;
     text-shadow: 2px 2px 5px #111;
     font-style: italic;
