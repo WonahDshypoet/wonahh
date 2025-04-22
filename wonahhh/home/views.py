@@ -10,20 +10,23 @@ def homepage(request):
 
 def contact(request):
     if request.method == 'POST':
-        name = request.POST('name')
-        email = request.POST('email')
-        message = request.POST('message')
+        try:
+            name = request.POST['name']
+            email = request.POST['email']
+            message = request.POST['message']
 
-        full_message = f"From: {name} <{email}>\n\n{message}"
+            full_message = f"From: {name} <{email}>\n\n{message}"
 
-        send_mail(
-            subject="New Contact Form Submission",
-            message=full_message,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.CONTACT_EMAIL],
-        )
-        return redirect('/')
- 
+            send_mail(
+                subject="New Contact Form Submission",
+                message=full_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[settings.CONTACT_EMAIL],
+            )
+            return redirect('/') # replace with your success template
+        except Exception as e:
+            return render(request, 'home/contact.html', {'error': str(e)})
+    
     return render(request, 'home/contact.html')
 
 def services(request):
