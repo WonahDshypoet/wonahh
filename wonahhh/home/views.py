@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
 
 
 # Create your views here.
@@ -8,6 +10,7 @@ from django.conf import settings
 def homepage(request):
     return render (request, 'home/index.html')
 
+@csrf_exempt
 def contact(request):
     if request.method == 'POST':
         try:
@@ -23,9 +26,14 @@ def contact(request):
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[settings.CONTACT_EMAIL],
             )
-            return redirect('home/contact.html') # replace with your success template
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({'success': True})
+            else:
+                return redirect('home/contact.html') # replace with your success template
         except Exception as e:
-            return render(request, 'home/contact.html', {'error': str(e)})
+            print("Mail error:", e)
+            if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+                return JsonResponse({'success': False, 'error': str(e)}, status=500)
     
     return render(request, 'home/contact.html')
 

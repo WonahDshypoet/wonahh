@@ -64,71 +64,58 @@
         </footer>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const form = document.getElementById("contact-form");
-            
-                form.addEventListener("submit", async function (e) {
-                    e.preventDefault();
-            
-                    const formData = new FormData(form);
-            
-                    const response = await fetch(form.action, {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            'X-Requested-With': 'XMLHttpRequest',
-                        }
-                    });
-            
-                    if (response.ok) {
-                        showPopup("✅ Message sent successfully! Thank You for contacting me!");
-                        form.reset();
-                    } else {
-                        showPopup("❌ Something went wrong. Please try again.");
+            const form = document.getElementById("contact-form");
+
+            form.addEventListener("submit", async function (e) {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
                     }
                 });
-            
-                function showPopup(message) {
-                    const popupOverlay = document.createElement("div");
-                    popupOverlay.style.position = "fixed";
-                    popupOverlay.style.top = 0;
-                    popupOverlay.style.left = 0;
-                    popupOverlay.style.width = "100%";
-                    popupOverlay.style.height = "100%";
-                    popupOverlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
-                    popupOverlay.style.display = "flex";
-                    popupOverlay.style.justifyContent = "center";
-                    popupOverlay.style.alignItems = "center";
-                    popupOverlay.style.zIndex = "1000";
 
-                    const popup = document.createElement("div");
-                    popup.innerText = message;
-                    popup.style.padding = "25px 40px";
-                    popup.style.background = "#ffffff";
-                    popup.style.color = "#333";
-                    popup.style.fontSize = "18px";
-                    popup.style.fontWeight = "500";
-                    popup.style.borderRadius = "12px";
-                    popup.style.boxShadow = "0 10px 25px rgba(0,0,0,0.2)";
-                    popup.style.textAlign = "center";
-                    popup.style.transition = "all 0.3s ease-in-out";
-                    popup.style.transform = "scale(0.9)";
-                    popup.style.opacity = "0";
+                const popup = (msg, success = true) => {
+                    const overlay = document.createElement("div");
+                    overlay.style.position = "fixed";
+                    overlay.style.top = 0;
+                    overlay.style.left = 0;
+                    overlay.style.width = "100%";
+                    overlay.style.height = "100%";
+                    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+                    overlay.style.display = "flex";
+                    overlay.style.justifyContent = "center";
+                    overlay.style.alignItems = "center";
+                    overlay.style.zIndex = "9999";
 
-                    // Fade in animation
+                    const box = document.createElement("div");
+                    box.style.background = success ? "#e1ffe1" : "#ffe1e1";
+                    box.style.padding = "25px 40px";
+                    box.style.borderRadius = "12px";
+                    box.style.fontSize = "18px";
+                    box.style.fontWeight = "500";
+                    box.innerText = msg;
+
+                    overlay.appendChild(box);
+                    document.body.appendChild(overlay);
+
                     setTimeout(() => {
-                        popup.style.opacity = "1";
-                        popup.style.transform = "scale(1)";
-                    }, 100);
-
-                    popupOverlay.appendChild(popup);
-                    document.body.appendChild(popupOverlay);
-
-                    // Auto-close after 4 seconds
-                    setTimeout(() => {
-                        popupOverlay.remove();
+                        document.body.removeChild(overlay);
                     }, 4000);
+                };
+
+                if (response.ok) {
+                    popup("✅ Message sent successfully! Thank You for contacting me!");
+                    form.reset();
+                } else {
+                    popup("❌ Failed to send. Please try again.", false);
                 }
             });
+        });
             </script>
     </body>
 </html>
