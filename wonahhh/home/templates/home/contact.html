@@ -24,7 +24,7 @@
         </header>
         <section class="contact-me">
             <div id="contact-form">
-                <form method="POST" action="{% url 'contact' %}">
+                <form id="contact-from" method="POST" action="{% url 'contact' %}">
                     {% csrf_token %}
                     <fieldset>
                         <legend></legend>
@@ -64,7 +64,7 @@
         </footer>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contact-form");
+            const form = document.getElementById("contact-from");
 
             form.addEventListener("submit", async function (e) {
                 e.preventDefault();
