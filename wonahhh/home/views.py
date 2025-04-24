@@ -23,7 +23,7 @@ def contact(request):
                 from_email=settings.DEFAULT_FROM_EMAIL,
                 recipient_list=[settings.CONTACT_EMAIL],
             )
-            return redirect('/') # replace with your success template
+            return redirect('home/contact.html') # replace with your success template
         except Exception as e:
             return render(request, 'home/contact.html', {'error': str(e)})
     
