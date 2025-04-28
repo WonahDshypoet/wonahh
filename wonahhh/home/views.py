@@ -196,6 +196,7 @@ def snake_game(request):
     gameLoop()
     return render(request, 'home/snake_game.html')
 
+@csrf_exempt
 def guess_game(request):
     if 'guess' not in request.session or 'remaining_guesses' not in request.session:
         # Start a new game
