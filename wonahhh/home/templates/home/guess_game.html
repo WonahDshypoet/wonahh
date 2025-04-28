@@ -21,7 +21,7 @@
     </header>
     <h1>Guess the Number</h1>
     <section class="contact-me">
-        <form method="POST">
+        <form method="post" action="{% url 'guess_game' %}">
             {% csrf_token %}
             <input type="number" name="guess" placeholder="Enter a number between 1 and 100" required>
             <button type="submit">Submit</button>
