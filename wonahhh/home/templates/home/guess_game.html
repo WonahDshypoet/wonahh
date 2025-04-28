@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Wonah Godwin"/>
+    <meta name="Copyright" content="Copyright Wonah Godwin, All Rights reserved"/>
+    <meta name="description" content="I'm Godwin a Django Web developer &amp; Python programmer"/>
+    {% load static %}
+    <link href="{% static 'home\style.css' %}" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <a href="{% url 'homepage' %}" class="header-brand" color="white"> ....Wonah<br> Developer</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'contact' %}">Contact</a> </li>
+                <li><a href="{% static 'home/Godwin Wonah Resume.pdf' %}" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Guess the Number</h1>
+    <section class="contact-me">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="number" name="guess" placeholder="Enter a number between 1 and 100" required>
+            <button type="submit">Submit</button>
+        </form>
+        {% if message %}
+            <p>{{ message }}</p>
+        {% endif %}
+        <a href="{% url 'homepage' %}">Back to Home</a>
+    </section>
+    <footer align="center" class="copy-footer">
+        <article>
+            &copy; Copyright Wonah Godwin, All rights reserved.<br>
+            Connect with me.
+        </article>
+        <div id="socials"><a href="https://x.com/shypoet__"><img src="{% static 'home/xlogo.jpg' %}" alt="twitter"></a>
+            <a href="https://www.quora.com/profile/Wonah-Godwin"><img src="{% static 'home/quoralogo.png' %}" alt="quora"></a>
+            <a href="https://www.jobberman.com/account/customer/job-seeker"><img src="{% static 'home/jobbermanlogo.png' %}" alt="Jobberman"></a></div>
+    </footer>
+</body>
+</html>
