@@ -22,7 +22,6 @@
                  <ul>
                     <li><a href="contact" target="_blank">Contact</a> </li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="{% url 'guess_game' %}" target="_blank">Play guess game</a></li>
                     <li><a href="{% static 'home/Godwin Wonah Resume.pdf' %}" target="_blank">Resume</a></li>
                     <li><a href="#About">About</a></li>
                 </ul>
@@ -117,7 +116,7 @@
                 </div>
                 <div class="carousel-slide">
                 <a href="snake_game" target="_blank" class="carousel-link">
-                  <img src="{% static 'home/project2.jpg' %}" alt="Snake Game">
+                  <img src="{% static 'home/snake_game.png' %}" alt="Snake Game">
                   <h3>SNAKE GAME</h3>
                   <p>Get up to 100 in this snake game then you are a guru! PC only.</p>
                 </a>
@@ -172,11 +171,11 @@
                 currentSlide = (currentSlide - 1 + slides.length) % slides.length;
                 updateSlide(currentSlide);
               });
-            });
-            setInterval(() => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                updateSlide(currentSlide);
-            }, 5000); 
+              setInterval(() => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlide(currentSlide);
+                }, 2000);
+            }); 
             </script>            
     </body>
 </html>
