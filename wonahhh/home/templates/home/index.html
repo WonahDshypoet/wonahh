@@ -54,7 +54,7 @@
 
             </span>
                     <button id="message">
-                        <a href="snake_game" target="_blank"> Play snake game. </a>
+                        <a href="contact" target="_blank"> CONTACT </a>
                     </button>
             </div></a>
         </section>
@@ -103,6 +103,42 @@
             </div>
             
         </div></a>
+        <section id="projects" class="project-carousel-section">
+            <h2>My Projects</h2>
+            <div class="carousel-container">
+              <button class="carousel-btn prev">&#10094;</button>
+              <div class="carousel-track">
+                <div class="carousel-slide">
+                <a href="https://experdget.webflow.io/" target="_blank" class="carousel-link">
+                  <img src="{% static 'home/experdget.png' %}" alt="experdget team page">
+                  <h3>WEBFLOW WEBSITE</h3>
+                  <p>A website created with webflow from and AI to create images.</p>
+                </a>
+                </div>
+                <div class="carousel-slide">
+                <a href="snake_game" target="_blank" class="carousel-link">
+                  <img src="{% static 'home/project2.jpg' %}" alt="Snake Game">
+                  <h3>SNAKE GAME</h3>
+                  <p>Get up to 100 in this snake game then you are a guru! PC only.</p>
+                </a>
+                </div>
+                <div class="carousel-slide">
+                <a href="https://github.com/WonahDshypoet/Data-Scraping" target="_blank" class="carousel-link">
+                  <img src="{% static 'home/webscraper.png' %}" alt="Project 3">
+                  <h3>DATA SCRAPING</h3>
+                  <p>Data scraping of websites using beautifulsoup and pandas.</p>
+                </div>
+                <div class="carousel-slide">
+                    <a href="guess_game" target="_blank" class="carousel-link">
+                      <img src="{% static 'home/guess_game.png' %}" alt="Guess Game">
+                      <h3>GUESS GAME</h3>
+                      <p>Guess the right number in 5 trials.</p>
+                    </a>
+                </div>
+              </div>
+              <button class="carousel-btn next">&#10095;</button>
+            </div>
+
         </section>
         <footer align="center" class="copy-footer">
             <article>
@@ -114,6 +150,33 @@
                 <a href="https://www.jobberman.com/account/customer/job-seeker"><img src="{% static 'home/jobbermanlogo.png' %}" alt="Jobberman"></a>
             </div>
         </footer>
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const track = document.querySelector('.carousel-track');
+              const slides = Array.from(track.children);
+              const prevButton = document.querySelector('.carousel-btn.prev');
+              const nextButton = document.querySelector('.carousel-btn.next');
+              let currentSlide = 0;
+            
+              function updateSlide(index) {
+                const slideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transform = 'translateX(-' + slideWidth * index + 'px)';
+              }
+            
+              nextButton.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlide(currentSlide);
+              });
+            
+              prevButton.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlide(currentSlide);
+              });
+            });
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlide(currentSlide);
+            }, 5000); 
+            </script>            
     </body>
 </html>
