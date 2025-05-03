@@ -237,7 +237,7 @@ header a:active{
     color: white;
     border: none;
     font-size: 30px;
-    padding: 10px 15px;
+    padding: 2.5px 5px;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
@@ -278,9 +278,9 @@ footer article {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-  }
+}
   
-  #socials a {
+#socials a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -290,17 +290,17 @@ footer article {
     border-radius: 50%;
     overflow: hidden;
     transition: background 0.3s ease;
-  }
+}
   
-  #socials a img {
+#socials a img {
     width: 60%;
     height: 60%;
     object-fit: contain;
-  }
+}
   
-  #socials a:hover {
+#socials a:hover {
     background-color: #1da1f2;
-  }
+}
   
   
 
@@ -389,3 +389,89 @@ label{
     } 
     
 }
+
+            /*Guess Game*/
+section.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #f5f7fa;
+    font-family: 'Orbitron', sans-serif;
+    color: #e0e0e0;
+    padding: 2rem;
+
+}
+
+section.contact form {
+    background-color: #e0e0e0;
+    padding: 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+section.contact input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+section.contact input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+section.contact button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+section.contact button:hover {
+    background-color: #0056b3;
+}
+
+section.contact p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #121212;
+    padding: 0.8rem 1rem;
+    border-radius: 50px;
+    box-shadow: 0 0 8px rgba(0, 255, 170, 0.1);
+}
+
+section.contact p.success {
+    color: #00ff88;
+    border: 1px solid #00ff88;
+}
+
+section.contact p.error {
+    color: #ff4b4b;
+    border: 1px solid #ff4b4b;
+}
+
+section.contact a {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+section.contact a:hover {
+    text-decoration: underline;
+}
+

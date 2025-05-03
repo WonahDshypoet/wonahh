@@ -12,32 +12,22 @@
     <link href="{% static 'home\style.css' %}" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <header class="header">
-        <a href="{% url 'homepage' %}" class="header-brand" color="white"> ....Wonah<br> Developer</a>
-        <nav>
-            <ul>
-                <li><a href="{% url 'contact' %}">Contact</a> </li>
-                <li><a href="{% static 'home/Godwin Wonah Resume.pdf' %}" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-    </header>
-    <h1>Guess the Number</h1>
-    <section class="contact-me">
+    
+    <section class="contact">
         <form method="post" action="{% url 'guess_game' %}">
             {% csrf_token %}
             <input type="number" name="guess" placeholder="Enter a number between 1 and 100" required>
             <button type="submit">Submit</button>
-        </form>
-        {% if message %}
-            {% if "Correct" in message %}
-                <p style="color: green;">{{ message }}</p>
-            {% else %}
-                <p style="color: red;">{{ message }}</p>
+            {% if message %}
+                {% if "Correct" in message %}
+                    <p class="success">{{ message }}</p>
+                {% else %}
+                    <p class="error">{{ message }}</p>
+                {% endif %}
             {% endif %}
-        {% endif %}        
-        <a href="{% url 'homepage' %}">Back to Home</a>
+        </form>
     </section>
-    <footer align="center" class="copy-footer">
+    <footer class="copy-footer">
         <article>
             &copy; Copyright Wonah Godwin, All rights reserved.<br>
             Connect with me.
